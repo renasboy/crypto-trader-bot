@@ -2443,11 +2443,15 @@ class maddog:
 
 
                 elif (  
-                    ma3_last > ma11_last
-                    
+                    ma3_last > ma10_last
+
+                    and deviation_ma25_sotto_ma300 > 1.00
+                    and (ma10_last > ma25_last or ma10_last > ma40_last) 
+
                     and (ma450_last > ma450_360_min_ago or ma78_last > ma150_last)
 
                     and delta_50_25_last > delta_50_25_30_min_ago
+
                     and deviation_ma39 < -0.10
                     and deviation_ma3_sotto_ma50 < -0.10
                     and deviation_ma5_sopra_o_sotto_ma100 < -0.10
@@ -2458,7 +2462,7 @@ class maddog:
                     
                 ):    
               
-                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 y1 X - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
@@ -2466,9 +2470,102 @@ class maddog:
                     # 25 ott 2025 anticipata ndecchiecella
                     # 25 ott 2025 aggiunte pg
                     # 27 ott 2025 se delta 50-25 notte aggiungo deviation - non cosi' profonda.
-
-
                     #  6 feb 2026 ok !
+                    # 26 feb 2026 cresce tanto ma NON RITRACCIA ANCORA
+
+
+                elif (  
+                    ma3_last > ma9_last
+
+                    and deviation_ma25_sotto_ma300 > 1.00
+                    and (ma10_last < ma25_last or ma10_last < ma40_last)
+                    
+                    and (ma450_last > ma450_360_min_ago or ma78_last > ma150_last)
+
+                    and delta_50_25_last > delta_50_25_30_min_ago
+
+                    and deviation_ma39 < -0.340 
+                    and deviation_ma3_sotto_ma50 < -0.401 
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.08
+
+                ):    
+              
+                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 y1 Y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 18 mag 2025 aggiunta da RCCR e aggiunta anche in buy 5
+                    # 25 ott 2025 anticipata ndecchiecella
+                    # 25 ott 2025 aggiunte pg
+                    # 27 ott 2025 se delta 50-25 notte aggiungo deviation - non cosi' profonda.
+                    #  6 feb 2026 ok !
+                    # 26 feb 2026 cresce tanto ma RITRACCIA
+
+
+
+                elif (  
+                    ma3_last > ma11_last
+
+                    and deviation_ma25_sotto_ma300 < 1.00
+                    and (ma10_last > ma25_last or ma10_last > ma40_last)
+
+                    and (ma450_last > ma450_360_min_ago or ma78_last > ma150_last)
+
+                    and delta_50_25_last > delta_50_25_30_min_ago
+
+                    and deviation_ma39 < -0.10
+                    and deviation_ma3_sotto_ma50 < -0.10
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    
+                    and deviation_ma3_sotto_ma100 > -0.20
+                    
+                    and ma3_last > ma9_last
+                    
+                ):    
+              
+                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 y2 X - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 18 mag 2025 aggiunta da RCCR e aggiunta anche in buy 5
+                    # 25 ott 2025 anticipata ndecchiecella
+                    # 25 ott 2025 aggiunte pg
+                    # 27 ott 2025 se delta 50-25 notte aggiungo deviation - non cosi' profonda.
+                    #  6 feb 2026 ok !
+                    # 26 feb 2026 cresce non cosi' tanto ma NON RITRACCIA ANCORA
+
+
+
+                elif (  
+                    ma3_last > ma10_last
+
+                    and deviation_ma25_sotto_ma300 < 1.00
+                    and (ma10_last < ma25_last or ma10_last < ma40_last)
+
+                    and (ma450_last > ma450_360_min_ago or ma78_last > ma150_last)
+
+                    and delta_50_25_last > delta_50_25_30_min_ago
+
+                    and deviation_ma39 < -0.15
+                    and deviation_ma3_sotto_ma50 < -0.15
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.10
+                    
+                    and deviation_ma3_sotto_ma100 > -0.20
+                    
+                    and ma3_last > ma9_last
+                    
+                ):    
+              
+                    buy = f"BUY 1 con ma450_last > ma450_360_min_ago e 78>150 del 18 mag 2025 - r 915 y2 Y - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 18 mag 2025 aggiunta da RCCR e aggiunta anche in buy 5
+                    # 25 ott 2025 anticipata ndecchiecella
+                    # 25 ott 2025 aggiunte pg
+                    # 27 ott 2025 se delta 50-25 notte aggiungo deviation - non cosi' profonda.
+                    #  6 feb 2026 ok !
+                    # 26 feb 2026 cresce non cosi' tanto ma RITRACCIA
 
 
 
