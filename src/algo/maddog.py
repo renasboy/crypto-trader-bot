@@ -43774,10 +43774,15 @@ class maddog:
                     # 21 mar 2025 distanza al ribasso se 30 ma39_last < ma39_20_min_ago
                     # 16 apr 2025 and macd_differenza_2_min_ago a -18.50 da -2.50
 
-                    
 
+
+                    
                 elif (
-                    ma3_last > ma13_last
+                    ma3_last > ma11_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.01
+
+                    and delta_300_200 < delta_300_200_60_min
 
                     and (ma100_last > ma100_60_min_ago or delta_CV_300_25_last < delta_CV_300_25_45_min_ago)
                     and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.30)
@@ -43798,10 +43803,86 @@ class maddog:
 
                     and macd_differenza_2_min_ago > -18.50
                 ):
-                    buy = f"BUY 5 IL MIO CAPOLAVORO con ma450_last > ma450_360_min_ago E ma100> - r 7384 A2 XX 2Y Yx - deviation_ma39 {deviation_ma39} deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50} deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100} deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300} deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago}"
+                    buy = f"BUY 5 IL MIO CAPOLAVORO con 300-200 GIORNO e con ma450_last > ma450_360_min_ago E ma100> - r 7384 A2 XX 2Y Yx X - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                     action = "buy"
                     percentage = 90
 
+                    # 26 FEB 2026 AGGIUNTE PG
+                    # 26 feb 2026 se delta_300_200 < delta_300_200_60_min GIORNO
+                    # 26 feb 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > -0.01 
+
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0123
+
+                    and delta_300_200 > delta_300_200_60_min
+                    and ma20_last > ma40_last
+
+                    and (ma100_last > ma100_60_min_ago or delta_CV_300_25_last < delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.30)
+
+
+                    and (ma450_last > ma450_360_min_ago or ma300_last > ma450_last)
+
+                    and deviation_ma300_sopra_ma450 > -0.40
+                    and deviation_ma100_sopra_ma300 > -0.40
+
+                    and deviation_ma39 < -0.127
+                    and deviation_ma3_sotto_ma50 < -0.123
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.30
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
+
+                    and deviation_ma10_sotto_ma100 < -0.06
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 5 IL MIO CAPOLAVORO con 300-200 NOTTE ma ancora non ritracciamento sempre con ma450_last > ma450_360_min_ago E ma100> - r 7384 A2 XX 2Y Yx Y1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 26 FEB 2026 AGGIUNTE PG
+                    # 26 feb 2026 se delta_300_200 > delta_300_200_60_min NOTTE ma ancora non ritracciamento
+                    # 26 feb 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0123
+
+
+                elif (
+                    ma3_last > ma13_last
+
+                    and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0234
+
+                    and delta_300_200 > delta_300_200_60_min
+                    and ma20_last < ma40_last
+
+                    and (ma100_last > ma100_60_min_ago or delta_CV_300_25_last < delta_CV_300_25_45_min_ago)
+                    and (delta_CM_300_25_last < delta_CM_300_25_2_min_ago or deviation_ma25_sotto_ma300 < -0.30)
+
+
+                    and (ma450_last > ma450_360_min_ago or ma300_last > ma450_last)
+
+                    and deviation_ma300_sopra_ma450 > -0.40
+                    and deviation_ma100_sopra_ma300 > -0.40
+
+                    and deviation_ma39 < -0.12
+                    and deviation_ma3_sotto_ma50 < -0.18
+                    and deviation_ma5_sopra_o_sotto_ma100 < -0.30
+                    and deviation_ma25_sotto_ma300 < -0.40
+                    and deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.10
+
+                    and deviation_ma10_sotto_ma100 < -0.06
+
+                    and macd_differenza_2_min_ago > -18.50
+                ):
+                    buy = f"BUY 5 IL MIO CAPOLAVORO con 300-200 NOTTE e CON RITRACCIAMENTO e sempre con ma450_last > ma450_360_min_ago E ma100> - r 7384 A2 XX 2Y Yx Y2 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                    action = "buy"
+                    percentage = 90
+
+                    # 26 FEB 2026 AGGIUNTE PG
+                    # 26 feb 2026 se delta_300_200 > delta_300_200_60_min NOTTE e CON RITRACCIAMENTO
+                    # 26 feb 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.0234
 
 
 
