@@ -68982,20 +68982,19 @@ class maddog:
             elif (
                 ma50_last > ma50_2_min_ago
 
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.001
-                and (deviation_ma100_sotto_ma200 > 0.08 or delta_300_200 < delta_300_200_30_min)
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.004
 
-                and ma200_last > ma450_last
                 and ma10_last > ma20_last
+                and ma200_last > ma450_last
+                and deviation_ma100_sopra_ma300 > 0.20
+                
+                and delta_450_300 < delta_450_300_60_min
+                and (deviation_ma100_sotto_ma200 > 0.08 or delta_300_200 < delta_300_200_30_min)
 
                 and ma28_last < ma100_last
                 
-                
                 and deviation_ma39 < 0.02
                 and deviation_sell < -0.01
-                
-                and deviation_ma100_sopra_ma300 > 0.20
-                and delta_450_300 < delta_450_300_60_min
                 
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago < 1.50
                 and deviation_ma5_sopra_o_sotto_ma5_1080_min_ago > -1.50
@@ -69009,6 +69008,8 @@ class maddog:
                 action = "sell"
 
                 # 30 GEN 2026 SE and (deviation_ma100_sotto_ma200 > 0.08 or delta_300_200 < delta_300_200_30_min) ALLORA deviation_ma8_sopra_o_sotto_ma8_2_min_ago < 0.001
+                # 27 feb 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.004 da < 0.001
+                # 27 FEB 2026 STATTE CALMO
 
 
 
