@@ -17057,6 +17057,9 @@ class ro_cano_che_ritorna:
 
                     # 29 nov 2025 se (deviation_ma100_sopra_ma300 > -0.08 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > 0.015 or ma10_last > ma125_last) ok cosi'
 
+
+
+
                 elif (
                     
                     ma3_last > ma9_last
