@@ -2103,7 +2103,7 @@ class maddog:
                     # delta_y = ma200_60_min_ago / ma59_60_min_ago
                     # bloccato 24 gen 2026
                     # 31 gen 2026 con deviation_ma78_sotto_ma100 > -0.017
-
+                    # in tutti gli altri casi ! and not (ma8_last < ma8_5_min_ago)
 
 
 
