@@ -75199,7 +75199,7 @@ class maddog:
                 and (ma3_prev > ma9_prev and ma3_last < ma9_last)
 
                 and ma8_last <= ma8_2_min_ago
-
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
 
                 and (ma10_last < ma20_last or ma3_last < ma100_last)
                 and (deviation_ma300_sopra_ma450 > -0.22 or deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04)
@@ -75224,6 +75224,7 @@ class maddog:
                 # 23 ott 2025 sell con 3-9 da 3-8 se deviation_ma100_sopra_o_sotto_ma100_10_min_ago > -0.04 (cioe' comincia a risalire)
                 # 28 feb 2026 aggiunte PG
                 # 28 feb 2026 aggiunta and (ma3_prev > ma9_prev and ma3_last < ma9_last)
+                # 28 feb 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.001
 
 
             elif (    
