@@ -53593,7 +53593,7 @@ class maddog:
 
 
                 elif (    
-                    ma3_last > ma9_last
+                    ma3_last > ma6_last
 
                     and deviation_ma200_sotto_ma300 > -0.10
                     and deviation_ma8_sopra_o_sotto_ma8_2_min_ago > 0.001
@@ -53632,6 +53632,9 @@ class maddog:
                     # 23 ott 2025 aggiunto cm notte
                     # 27 feb 2026 aggiunte pg
                     # 20 GIU 2026 OK ! NTPD
+                    # 06 lug 2026 3-6 da 3-9
+
+
 
 
                 elif (
