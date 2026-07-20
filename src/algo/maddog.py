@@ -75006,6 +75006,8 @@ class maddog:
                     
                     elif (
                         ma50_last < ma50_2_min_ago
+                        and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0237
+
                         and deviation_ma10_sopra_ma200 > 0.20
 
                         and (ma3_prev > ma22_prev and ma3_last < ma22_last)
@@ -75019,7 +75021,7 @@ class maddog:
                         # 17 mar 2023 3-20 da 3-18 vedi 3 mar 2023 ore 3:43 madonna ! c'e' stato un crollo spaventoso e si e' comportato benissimo !
                         # 20 lug 2026 ok
                         # 20 lug 2026 aggiunte PG
-
+                        # 20 lug 2026 aggiunta and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.0237
 
 
                     elif (
