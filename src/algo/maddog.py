@@ -81160,14 +81160,14 @@ class maddog:
                 and deviation_ma25_sotto_ma300 > -0.85
 
                 and deviation_ma78_sotto_ma100 < 0.01
-                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.01345
 
-                and ma100_last < ma300_last
-                
+                and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.029
                 
                 and (ma3_prev > ma22_prev and ma3_last < ma22_last)
                 and (ma3_prev > ma25_prev and ma3_last < ma25_last)
 
+                and ma100_last < ma300_last
+                
                 and deviation_sell > -0.15
                 and (deviation_ma39 < 0.068 or deviation_ma3_sotto_ma50 < 0.069 or ma50_last < ma50_60_min_ago)
                 
@@ -81181,10 +81181,12 @@ class maddog:
                 and (ma5_last < ma100_last or ma5_last < ma200_last or ma5_last < ma300_last)
                 
             ):
-                sell = f"SELL CS guadagno durante un ribasso del 15 ott 2025 da 0 a 30 min - r 16045 B2 Y2 X1 xy 1Y 1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
+                sell = f"SELL CS guadagno durante un ribasso del 15 ott 2025 da 0 a 30 min - r 16045 B2 Y2 X1 xy 1Y 1 - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma13_sopra_o_sotto_ma13_2_min_ago {deviation_ma13_sopra_o_sotto_ma13_2_min_ago:.4f} and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
 
                 # 28 APR 2026 SE deviation_ma25_sotto_ma300 > -0.85 VENDE CON 3-22 E 3-25 DA 3-20 E 3-22
+                # 20 lug 2026 and deviation_ma8_sopra_o_sotto_ma8_2_min_ago < -0.029 da < -0.01345
+                # 20 lug 2026 aggiunta and deviation_ma13_sopra_o_sotto_ma13_2_min_ago nelle PG
 
 
 
@@ -91164,7 +91166,7 @@ class maddog:
                 and deviation_sell > 0.55
                 and deviation_sell < 1.20
                 
-            ):    
+            ): 
                 sell = f"SELL condizione PMS da 0 a 60 min con 2-9 COMPLEANNO COMPARE MIO ! - INTANTO TE LI PRENDI - r 16888 ax - and deviation_ma8_sopra_o_sotto_ma8_2_min_ago {deviation_ma8_sopra_o_sotto_ma8_2_min_ago:.4f} and deviation_ma13_sopra_o_sotto_ma13_2_min_ago {deviation_ma13_sopra_o_sotto_ma13_2_min_ago:.4f and deviation_ma78_sotto_ma100 {deviation_ma78_sotto_ma100:.3f} and deviation_ma50_sotto_ma100 {deviation_ma50_sotto_ma100:.3f} and deviation_ma100_sotto_ma200 {deviation_ma100_sotto_ma200:.3f} and deviation_ma39 {deviation_ma39:.3f} and deviation_ma3_sotto_ma50 {deviation_ma3_sotto_ma50:.3f} and deviation_ma5_sopra_o_sotto_ma100 {deviation_ma5_sopra_o_sotto_ma100:.3f} and deviation_ma25_sotto_ma300 {deviation_ma25_sotto_ma300:.3f} and deviation_ma100_sopra_o_sotto_ma100_10_min_ago {deviation_ma100_sopra_o_sotto_ma100_10_min_ago:.3f}"
                 action = "sell"
                 
